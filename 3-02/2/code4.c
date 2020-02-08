@@ -16,7 +16,7 @@ int main()
     else // fils
     {
         printf("Je suis le fils je vais attendre 15 secondes\n");
-        sleep(15); // ./code4& -> ps -> kill -9 (pid_fils)
+        sleep(15);          // ./code4& -> ps -> kill -9 (pid_fils)
         if (getppid() == 1) // booh maaash mawjood hawnyya
             printf("\nmon père est mort\n");
         exit(0xFA); // wait()
