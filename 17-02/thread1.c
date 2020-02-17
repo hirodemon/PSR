@@ -8,7 +8,7 @@ void *afficher(void *param)
 {
     int *t = (int *)param;
     printf("Valeur = %d\n", *t);
-    pthread_exit(NULL);
+    pthread_exit(NULL); // default exit (optional)
 }
 
 int main()
