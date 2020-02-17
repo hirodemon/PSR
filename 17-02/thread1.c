@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <pthread.h>
+
 /*  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     gcc thread1.c -o thread1 -lpthread
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
