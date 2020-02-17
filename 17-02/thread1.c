@@ -8,6 +8,7 @@ void *afficher(void *param)
 {
     int *t = (int *)param;
     printf("Valeur = %d\n", *t);
+    pthread_exit(NULL);
 }
 
 int main()
@@ -18,7 +19,7 @@ int main()
     if (pthread_create(&th1, NULL, afficher, &arg))
     {
         perror("error de creation de thread");
-        pthread_exit(NULL);
+        return 0;
     }
 
     pthread_join(th1, NULL);
