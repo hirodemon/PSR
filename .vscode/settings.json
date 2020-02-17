@@ -3,6 +3,7 @@
         "addition.h": "c",
         "cstdio": "c",
         "stdio2.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "pthread.h": "c"
     }
 }
