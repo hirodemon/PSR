@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <pthread.h>
 
-// Global variable
-int arg = 0, max = 1000000;
+// Global variables
+int arg = 0, max = 50000;
 pthread_mutex_t verrou;
 
 void *incrementer()
@@ -11,7 +11,7 @@ void *incrementer()
     {
         pthread_mutex_lock(&verrou);
         arg++;
-        //printf("INC: %d\n", arg);
+        printf("INC: %d\n", arg);
         pthread_mutex_unlock(&verrou);
     }
     pthread_exit(NULL);
@@ -23,7 +23,7 @@ void *decrementer()
     {
         pthread_mutex_lock(&verrou);
         arg--;
-        //printf("DEC: %d\n", arg);
+        printf("DEC: %d\n", arg);
         pthread_mutex_unlock(&verrou);
     }
     pthread_exit(NULL);
